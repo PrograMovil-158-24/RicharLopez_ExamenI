@@ -14,3 +14,9 @@ Creacion de estilos , para una experiencia visual mas emocionante
 
 > [!TIP]
 > Al clonar el repostorio no olvidemos ejecutar el comando 'flutter pub get'.
+
+### Pantalla 'Lista Libro' 
+![alt text](image-1.png)
+
+### Pantalla 'Detalle Libro' 
+![alt text](image.png)
