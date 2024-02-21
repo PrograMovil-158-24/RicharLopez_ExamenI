@@ -1,16 +1,11 @@
 # examen_1
 
-A new Flutter project.
+Creacion de aplicacion , funcionalidad de mostrar titulos de libros y detalles del mismo .
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+El princial objetivo de la aplicacion es el consumo de un archivo json localmente , el cual contiene datos de libros y sus especificaciones ; tenemos nuestro archivo llamado 'data.json' en los assets , nuestra funcionalidad de JsonReader y los modelos , widgets y pantallas organizadas siguiendo la estructufra clean code . 
 
-A few resources to get you started if this is your first Flutter project:
+## En proceso
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Creacion de estilos , para una experiencia visual mas emocionante
