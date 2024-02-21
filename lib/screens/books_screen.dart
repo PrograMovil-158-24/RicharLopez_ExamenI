@@ -10,7 +10,7 @@ class Books_Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Lista de Libros"),
+        title: const Center(child: Text("Lista de Libros")),
       ),
       body: Center(child: BooksList()),
     );

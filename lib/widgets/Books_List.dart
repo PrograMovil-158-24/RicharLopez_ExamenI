@@ -1,5 +1,7 @@
 import 'package:examen_1/services/JsonReader.dart';
+import 'package:examen_1/models/Books_model.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 // ignore: non_constant_identifier_names
 Widget BooksList() {
@@ -17,7 +19,14 @@ Widget BooksList() {
 }
 
 List<Widget> listItems(List<dynamic>? data, BuildContext context) {
-  List<Widget> listItems = [];
-  print(data);
-  return listItems;
+  List<Widget> _listItems = [];
+
+  data?.forEach((element) {
+    _listItems.add(ListTile(
+        title: Text(element.title),
+        onTap: () => {
+              context.go('/books-details', extra: {'book': element})
+            }));
+  });
+  return _listItems;
 }

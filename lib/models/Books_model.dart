@@ -1,8 +1,6 @@
-// ignore_for_file: non_constant_identifier_names
+import 'dart:convert';
 
-import 'dart:convert' ;
-
-Books booksFromJson(String str) => Books.fromJson(json.decode(str));
+Books booksfromJson(String str) => Books.fromJson(json.decode(str));
 
 class Books {
   int id;
@@ -10,10 +8,11 @@ class Books {
   String title;
   String handle;
   String publisher;
-  String ISBN;
+  String isbn;
   int pages;
   List<String> notes;
-  String creadedAt;
+  DateTime createdAt;
+  //  List<Villain> villains;
 
   Books({
     required this.id,
@@ -21,21 +20,23 @@ class Books {
     required this.title,
     required this.handle,
     required this.publisher,
-    required this.ISBN,
+    required this.isbn,
     required this.pages,
     required this.notes,
-    required this.creadedAt,
+    required this.createdAt,
+    //s required this.villains,
   });
 
   factory Books.fromJson(Map<String, dynamic> json) => Books(
-    id:json["id"],
-    year:json["year"],
-    title:json["title"],
-    handle:json["handle"],
-    publisher:json["publisher"],
-    ISBN:json["ISBN"],
-    pages:json["pages"],
-    notes:json["notes"],
-    creadedAt:json["creaded_at"],
-    );
+        id: json["id"],
+        year: json["Year"],
+        title: json["Title"],
+        handle: json["handle"],
+        publisher: json["Publisher"],
+        isbn: json["ISBN"],
+        pages: json["Pages"],
+        notes: List<String>.from(json["Notes"].map((x) => x)),
+        createdAt: DateTime.parse(json["created_at"]),
+        //  villains: List<Villain>.from(json["villains"].map((x) => Villain.fromJson(x))),
+      );
 }
